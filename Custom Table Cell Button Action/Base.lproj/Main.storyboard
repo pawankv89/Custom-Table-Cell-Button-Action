@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ftj-ap-cOw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom List View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Custom_Table_Cell_Button_Action" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aHX-cJ-F0v">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aHX-cJ-F0v" secondAttribute="bottom" id="Kic-nr-tD6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aHX-cJ-F0v" secondAttribute="trailing" id="RTG-jf-wLG"/>
+                            <constraint firstItem="aHX-cJ-F0v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zdf-ey-gLg"/>
+                            <constraint firstItem="aHX-cJ-F0v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xlG-oG-awj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom List View" id="v9a-KA-qg8"/>
+                    <connections>
+                        <outlet property="tableview" destination="aHX-cJ-F0v" id="tJL-BQ-siW"/>
+                        <segue destination="wOs-rB-YJL" kind="push" identifier="MovieListVC_1" id="rEX-r0-yyi"/>
+                        <segue destination="Epz-Ns-xl2" kind="push" identifier="MovieListVC_2" id="ljo-s6-Xku"/>
+                        <segue destination="uLl-EC-jhz" kind="push" identifier="MovieListVC_3" id="zAe-79-hN3"/>
+                        <segue destination="zqb-Bm-TDe" kind="push" identifier="MovieListVC_4" id="YJ2-XX-3NV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="793"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jta-xa-6kD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ftj-ap-cOw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="io6-rt-lAv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pTD-1q-VZR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JdN-5A-uHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="792.95352323838085"/>
+        </scene>
+        <!--Custom List View-->
+        <scene sceneID="hw6-gh-nYA">
+            <objects>
+                <viewController storyboardIdentifier="MovieListVC_1" id="wOs-rB-YJL" customClass="MovieListVC_1" customModule="Custom_Table_Cell_Button_Action" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PZg-ln-KIR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m4O-YD-FSQ">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wOs-rB-YJL" id="YtV-l0-RVq"/>
+                                    <outlet property="delegate" destination="wOs-rB-YJL" id="C80-dP-1VE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="m4O-YD-FSQ" firstAttribute="top" secondItem="XTZ-t0-db9" secondAttribute="top" id="OQY-vF-KYy"/>
+                            <constraint firstItem="m4O-YD-FSQ" firstAttribute="leading" secondItem="XTZ-t0-db9" secondAttribute="leading" id="ew4-h7-PCg"/>
+                            <constraint firstItem="XTZ-t0-db9" firstAttribute="bottom" secondItem="m4O-YD-FSQ" secondAttribute="bottom" id="wDR-ca-HmS"/>
+                            <constraint firstItem="XTZ-t0-db9" firstAttribute="trailing" secondItem="m4O-YD-FSQ" secondAttribute="trailing" id="y5A-v2-qSo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XTZ-t0-db9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom List View" id="VZd-fM-ZfM"/>
+                    <connections>
+                        <outlet property="tableview" destination="m4O-YD-FSQ" id="Wdq-zT-VRY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezu-0i-hgX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="793"/>
+        </scene>
+        <!--Custom List View-->
+        <scene sceneID="LXU-1Z-IrI">
+            <objects>
+                <viewController storyboardIdentifier="MovieListVC_2" id="Epz-Ns-xl2" customClass="MovieListVC_2" customModule="Custom_Table_Cell_Button_Action" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vvg-px-JSS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SN4-8W-3Qa">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Epz-Ns-xl2" id="E0B-lf-smD"/>
+                                    <outlet property="delegate" destination="Epz-Ns-xl2" id="btN-jg-FAv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SN4-8W-3Qa" firstAttribute="leading" secondItem="m41-fF-Cew" secondAttribute="leading" id="IeP-If-Qcr"/>
+                            <constraint firstItem="m41-fF-Cew" firstAttribute="trailing" secondItem="SN4-8W-3Qa" secondAttribute="trailing" id="VfI-ta-4OV"/>
+                            <constraint firstItem="SN4-8W-3Qa" firstAttribute="top" secondItem="m41-fF-Cew" secondAttribute="top" id="aww-Uz-RdY"/>
+                            <constraint firstItem="m41-fF-Cew" firstAttribute="bottom" secondItem="SN4-8W-3Qa" secondAttribute="bottom" id="qK2-uf-rKh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m41-fF-Cew"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom List View" id="lYD-zD-0JN"/>
+                    <connections>
+                        <outlet property="tableview" destination="SN4-8W-3Qa" id="8UX-5w-xPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L4X-zP-bJg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2298" y="793"/>
+        </scene>
+        <!--Custom List View-->
+        <scene sceneID="2Jm-2F-6Ap">
+            <objects>
+                <viewController storyboardIdentifier="MovieListVC_3" id="uLl-EC-jhz" customClass="MovieListVC_3" customModule="Custom_Table_Cell_Button_Action" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fnp-oD-3d2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N4f-dx-ftj">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uLl-EC-jhz" id="ASx-Kj-mdu"/>
+                                    <outlet property="delegate" destination="uLl-EC-jhz" id="JFd-RP-EKU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N4f-dx-ftj" firstAttribute="top" secondItem="1kd-UJ-keX" secondAttribute="top" id="1iV-tw-5LZ"/>
+                            <constraint firstItem="1kd-UJ-keX" firstAttribute="trailing" secondItem="N4f-dx-ftj" secondAttribute="trailing" id="C0T-Um-SKk"/>
+                            <constraint firstItem="1kd-UJ-keX" firstAttribute="bottom" secondItem="N4f-dx-ftj" secondAttribute="bottom" id="Nsl-h1-R6J"/>
+                            <constraint firstItem="N4f-dx-ftj" firstAttribute="leading" secondItem="1kd-UJ-keX" secondAttribute="leading" id="eQJ-Om-Aoa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1kd-UJ-keX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom List View" id="EfO-tI-bB3"/>
+                    <connections>
+                        <outlet property="tableview" destination="N4f-dx-ftj" id="5f4-hV-rg7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sa7-Th-Fc0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2986" y="793"/>
+        </scene>
+        <!--Custom List View-->
+        <scene sceneID="ruX-aZ-jEK">
+            <objects>
+                <viewController storyboardIdentifier="MovieListVC_4" id="zqb-Bm-TDe" customClass="MovieListVC_4" customModule="Custom_Table_Cell_Button_Action" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CDz-2g-tyn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="drJ-4U-Fry">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zqb-Bm-TDe" id="QMu-Uq-vHr"/>
+                                    <outlet property="delegate" destination="zqb-Bm-TDe" id="c1j-ay-tbl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="drJ-4U-Fry" firstAttribute="top" secondItem="xc8-yl-Wmr" secondAttribute="top" id="0DM-XG-ncL"/>
+                            <constraint firstItem="xc8-yl-Wmr" firstAttribute="bottom" secondItem="drJ-4U-Fry" secondAttribute="bottom" id="G1d-Cp-9Bc"/>
+                            <constraint firstItem="drJ-4U-Fry" firstAttribute="leading" secondItem="xc8-yl-Wmr" secondAttribute="leading" id="kwG-0I-Djx"/>
+                            <constraint firstItem="xc8-yl-Wmr" firstAttribute="trailing" secondItem="drJ-4U-Fry" secondAttribute="trailing" id="omG-Pg-3Bo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xc8-yl-Wmr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom List View" id="PMT-I9-fD2"/>
+                    <connections>
+                        <outlet property="tableview" destination="drJ-4U-Fry" id="n2e-bL-7g1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRE-xc-mnx" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3694" y="793"/>
+        </scene>
+    </scenes>
+</document>

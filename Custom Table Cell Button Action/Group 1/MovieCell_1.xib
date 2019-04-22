@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell_1" rowHeight="104" id="iSs-v3-X2E" customClass="MovieCell_1" customModule="Custom_Table_Cell_Button_Action" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iSs-v3-X2E" id="Jzl-RW-H7r">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c3-hx-J7g">
+                        <rect key="frame" x="10" y="10" width="300" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkC-SM-gMR">
+                        <rect key="frame" x="10" y="44" width="300" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Was this content helpful ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXC-c1-VQc">
+                        <rect key="frame" x="10" y="71" width="230" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh0-ra-ObN">
+                        <rect key="frame" x="250" y="68.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="J6r-Si-QwX"/>
+                            <constraint firstAttribute="width" constant="25" id="zbr-na-6uV"/>
+                        </constraints>
+                        <state key="normal" image="feedbackLike"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddh-oC-e15">
+                        <rect key="frame" x="285" y="68.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="dT3-gD-glp"/>
+                            <constraint firstAttribute="height" constant="25" id="fcz-wE-QoM"/>
+                        </constraints>
+                        <state key="normal" image="feedbackDisLike"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ddh-oC-e15" firstAttribute="centerY" secondItem="AXC-c1-VQc" secondAttribute="centerY" id="9Ol-nP-j0P"/>
+                    <constraint firstItem="AXC-c1-VQc" firstAttribute="leading" secondItem="Jzl-RW-H7r" secondAttribute="leading" constant="10" id="ABc-eJ-WKA"/>
+                    <constraint firstItem="ddh-oC-e15" firstAttribute="leading" secondItem="Rh0-ra-ObN" secondAttribute="trailing" constant="10" id="CDY-1W-6zX"/>
+                    <constraint firstAttribute="bottom" secondItem="AXC-c1-VQc" secondAttribute="bottom" constant="9" id="Hs5-U4-2f5"/>
+                    <constraint firstItem="GkC-SM-gMR" firstAttribute="leading" secondItem="Jzl-RW-H7r" secondAttribute="leading" constant="10" id="JC6-8l-Wqn"/>
+                    <constraint firstItem="AXC-c1-VQc" firstAttribute="top" secondItem="GkC-SM-gMR" secondAttribute="bottom" constant="7.5" id="XBS-JM-cWg"/>
+                    <constraint firstItem="Rh0-ra-ObN" firstAttribute="leading" secondItem="AXC-c1-VQc" secondAttribute="trailing" constant="10" id="XcK-Rc-yvo"/>
+                    <constraint firstAttribute="trailing" secondItem="1c3-hx-J7g" secondAttribute="trailing" constant="10" id="cBI-qn-gOw"/>
+                    <constraint firstItem="1c3-hx-J7g" firstAttribute="top" secondItem="Jzl-RW-H7r" secondAttribute="top" constant="10" id="cYO-Df-NJ7"/>
+                    <constraint firstAttribute="trailing" secondItem="ddh-oC-e15" secondAttribute="trailing" constant="10" id="eTn-I7-CPF"/>
+                    <constraint firstItem="Rh0-ra-ObN" firstAttribute="centerY" secondItem="AXC-c1-VQc" secondAttribute="centerY" id="ibo-oQ-vVN"/>
+                    <constraint firstItem="1c3-hx-J7g" firstAttribute="leading" secondItem="Jzl-RW-H7r" secondAttribute="leading" constant="10" id="kdK-vP-PC1"/>
+                    <constraint firstAttribute="trailing" secondItem="GkC-SM-gMR" secondAttribute="trailing" constant="10" id="lXW-pT-F2u"/>
+                    <constraint firstItem="GkC-SM-gMR" firstAttribute="top" secondItem="1c3-hx-J7g" secondAttribute="bottom" constant="10" id="uXx-Dz-Xwv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Ee8-wn-qfI"/>
+            <connections>
+                <outlet property="dislikeButton" destination="ddh-oC-e15" id="rJH-28-gu4"/>
+                <outlet property="likeButton" destination="Rh0-ra-ObN" id="0BN-8X-Mq2"/>
+                <outlet property="subtitleLabel" destination="GkC-SM-gMR" id="snn-DY-NHX"/>
+                <outlet property="titleLabel" destination="1c3-hx-J7g" id="f7u-vt-lVz"/>
+            </connections>
+            <point key="canvasLocation" x="112.5" y="-49.647887323943664"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="feedbackDisLike" width="25" height="25"/>
+        <image name="feedbackLike" width="25" height="25"/>
+    </resources>
+</document>
